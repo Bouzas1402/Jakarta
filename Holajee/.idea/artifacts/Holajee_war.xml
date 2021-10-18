@@ -9,7 +9,7 @@
         <unpackNestedArchives>false</unpackNestedArchives>
       </options>
     </properties>
-    <root id="archive" name="holajee.war">
+    <root id="archive" name="Holajee.war">
       <element id="artifact" artifact-name="Holajee:war exploded" />
     </root>
   </artifact>
