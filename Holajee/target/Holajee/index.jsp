@@ -9,6 +9,6 @@
 </h1>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
-<a href="MuestraVariablesServidor">Muestra variables servidor</a>
+<a href="muestra">Muestra variables servidor</a>
 </body>
 </html>

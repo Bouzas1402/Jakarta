@@ -7,14 +7,25 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @WebServlet (name = "/MuestraVariablesServidor", value = "/muestra")
 public class MuestraVariablesServidor extends HttpServlet {
+    private static final Logger log = LoggerFactory.getLogger(HelloServlet.class);
+
+    private String message;
+
+    public void init() {
+        message = "Hello World!";
+    }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+            log.debug("returning the message {}", message);
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");

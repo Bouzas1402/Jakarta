@@ -9,8 +9,19 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @WebServlet("/Eco")
 public class EcoParametrosFormulario extends HttpServlet {
+    private static final Logger log = LoggerFactory.getLogger(HelloServlet.class);
+
+
+    private String message;
+
+    public void init() {
+        message = "Hello World!";
+    }
 
     // Independiza al servlet del método de envío del formulario
 
@@ -66,6 +77,7 @@ public class EcoParametrosFormulario extends HttpServlet {
         // Creación de la página html de respuesta
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+            log.debug("returning the message {}", message);
             out.println("<html>");
             out.println("<head>");
             out.println("<meta charset=\"UTF-8\">");
