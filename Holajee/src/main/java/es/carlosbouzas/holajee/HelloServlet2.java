@@ -1,20 +1,22 @@
 package es.carlosbouzas.holajee;
 
-import java.io.*;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import lombok.extern.slf4j.Slf4j;
 
 
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+import java.io.IOException;
+import java.io.PrintWriter;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
-public class HelloServlet extends HttpServlet {
+@Slf4j
+@WebServlet(name = "helloServlet2", value = "/hello-servlet2")
+public class HelloServlet2 extends HttpServlet {
     private String message;
-    private static final Logger log = LoggerFactory.getLogger(HelloServlet.class);
 
-    public void init () { message = "Hello world!";}
+
+    public void init () { message = "Carlos";}
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
@@ -29,6 +31,4 @@ public class HelloServlet extends HttpServlet {
         out.println("</body></html>");
     }
 
-    public void destroy() {
-    }
 }

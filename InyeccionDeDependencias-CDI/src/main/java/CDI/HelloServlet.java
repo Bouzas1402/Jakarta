@@ -1,13 +1,12 @@
-package es.carlosbouzas.holajee;
+package CDI;
 
-import java.io.*;
-
-
-import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
-
+import jakarta.servlet.http.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet(name = "helloServlet", value = "/hello-servlet")
 public class HelloServlet extends HttpServlet {
