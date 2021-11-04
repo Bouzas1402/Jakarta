@@ -50,7 +50,6 @@ public class contadorVisitas extends HttpServlet {
 				// se inicializa un objeto Cookie
 				String nombre = request.getParameter("usuario");
 				Integer contador = 1;
-				unaCookie = new Cookie(nombre);
 			}
 
 		} catch (Exception e){
